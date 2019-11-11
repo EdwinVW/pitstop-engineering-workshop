@@ -64,8 +64,8 @@ Install the .NET Core SDK version 3.0.
 
 Download link: <a href="https://www.microsoft.com/net/download" target="_blank">.NET Core SDK</a>
 
-#### Git client (optional)
-Optionally you can install the Git client for your OS to interact with the Pitstop repo on Github. This is optional because you can also download the code from Github in a zip file. 
+#### Git client
+Install the Git client for your OS to interact with the Pitstop repo on Github. 
 
 Download link: <a href="https://git-scm.com/downloads" target="_blank">Git</a> 
 
