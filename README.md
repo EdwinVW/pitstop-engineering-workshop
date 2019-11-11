@@ -38,7 +38,7 @@ There are some prerequisites for this workshop. First you need an active Interne
 - .NET Core SDK
 - (optional) Git client
 
->If you already have satisfied these prerequisites, you can skip Lab 0 and go directly to [Lab 1](#lab-1:-run-the-application). 
+>If you already have satisfied these prerequisites, you can skip Lab 0 and go directly to Lab 1. 
 
 ### Step 0.1: Install prerequisites
 Install the following software (if not already installed) on your laptop: 
@@ -73,17 +73,12 @@ Download link: <a href="https://git-scm.com/downloads" target="_blank">Git</a>
 If you do not already have a Github account, create one by going to the <a href="https://www.github.com" target="_blank">Github website</a> and click on the *Sign up* link in the top right corner. Make sure you are logged into Github with your account. 
 
 ## Lab 1: Run the applicaton
-In this lab we'll make sure you can run Pitstop on your machine. This will involve the following activities:
-
-- [Get the sources](#step-1.1:-get-the-sources)
-- [Build the Docker images](#step-1.2:-build-the-docker-images)
-- [Run the application](#step-1.3:-run-the-application)
-- [Get to know the solution](#step-1.4:-get-to-know-the-solution)
+In this lab we'll make sure you can run Pitstop on your machine. 
 
 ### Step 1.1: Get the sources
 Get the sources from Github onto your machine.
 
-For this to work, you must have installed the Git client (see [Step 0.1](#step-0.1:-install-prerequisites)). 
+For this to work, you must have installed the Git client (see Step 0.1). 
 1. Open your browser and navigate to the Pitstop repo on Github: <a href="https://github.com/edwinvw/pitstop" target="_blank">https://github.com/edwinvw/pitstop</a>. 
 2. Click the *Fork* button.
 3. The repo is forked to your Github account. If you have multiple accounts, Github will ask which account to fork to.
@@ -120,15 +115,6 @@ When something happens within the Pitstop application that could be interesting 
 In this lab you will add a service to the solution that will react to customer events. What we will do when the event is received is up to your imagination. For the workshop, we will keep it simple and just dump a message on the console. 
 
 The service we will build offers no API and can therefore be a simple console application (just as the existing *NotificationService* for instance). 
-
-This lab will involve the following steps:
-
-- [Creating a new .NET Core console application](#step-3.1:-create-the-.net-core-application)
-- [Write an event-handler that will ingest messages from the message-broker](#step-3.2:-create-event-handler).
-- [Running and testing the service](#step-3.3:-run-the-service)
-- [Building a Docker image for the service](#step-3.4:-create-docker-image)
-- [Running the service in a Docker container](#step-3.5:-run-the-service-in-a-docker-container)
-- [Running the service using docker-compose](#step-3.6:-run-the-service-using-docker-compose)
 
 ### Step 3.1: Create the .NET Core application
 First we will add a new service to the solution. 
@@ -232,7 +218,7 @@ In order to check whether or not you made any mistakes until now, build the code
 ### Step 3.3: Run the service
 We can start the *CustomerEventHandler* to test whether or not it works. 
 
-1. Make sure you have the Pitstop application running on your machine (as described in [Step 1.3: Run the application](#step-1.3:-run-the-application)).
+1. Make sure you have the Pitstop application running on your machine (as described in Step 1.3: Run the application).
 2. Open a command prompt or Powershell window and go to the *CustomerEventHandler* folder.
 3. Start the application by giving the following command: `dotnet run`.
 4. Open the browser and go to http://localhost:7000 to open the Pitstop web-app.
