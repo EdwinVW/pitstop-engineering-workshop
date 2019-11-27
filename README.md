@@ -333,6 +333,10 @@ Until now, you've ran Pitstop in containers on your local machine. In this lab y
 - Send the deployment diagram to your suprevisor for review.
 - Deploy Pitstop to Azure (and make sure the web-app is publicly available).
 - Share a link  to the web-app with your supervisor. 
+
+## Lab 6 - Setup a CI/CD pipeline
+Modern applications are built using an automated CI pipeline and deployed using an automated CD pipeline. Azure DevOps is a tool to implement fully automated CI/CD pipelines. There an on-premises version and a cloud version. In this assignment you will setup a CI/CD pipeline for building and deploying Pitstop.  
+
 - Build a CI/CD pipeline in Azure DevOps to do a fully automated deployment of the necessary infrastructure (according to your diagram) for hosting Pitstop in Azure. Hint: use ARM templates. 
 - Build a CI/CD pipeline in Azure DevOps to do a fully automated deployment of the Pitstop application on the provisioned infrastructure.
 
