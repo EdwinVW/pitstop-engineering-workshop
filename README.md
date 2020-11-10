@@ -20,7 +20,7 @@ Also, Pitstop demonstrates how to develop and deploy applications using several 
 - Service-mesh (Istio & Linkerd)
 
 # Labs
-In order to complete the labs, make sure you read the following sections of the [Pitstop wiki on Github](https://github.com/EdwinVW/pitstop/wiki):
+In order to complete the labs, make sure you read (at least) the following sections of the [Pitstop wiki on Github](https://github.com/EdwinVW/pitstop/wiki):
 
 - [Start page](https://github.com/EdwinVW/pitstop/wiki/Home)
 - [Application functionality](https://github.com/EdwinVW/pitstop/wiki/Application%20functionality)
@@ -59,8 +59,8 @@ This workshop assumes you are working with Visual Studio Code.
 
 Download link: <a href="https://visualstudio.microsoft.com/downloads" target="_blank">Visual Studio Code</a>
 
-#### .NET Core SDK
-Install the .NET Core SDK version 3.0. 
+#### .NET 5 SDK
+Install the .NET 5 SDK. 
 
 Download link: <a href="https://www.microsoft.com/net/download" target="_blank">.NET Core SDK</a>
 
@@ -99,7 +99,7 @@ In order to build the Docker images, follow the instructions in the <a href="htt
 In order to run the application, follow the instructions in the <a href="https://github.com/EdwinVW/pitstop/wiki/Run%20the%20application%20using%20using%20Docker%20Compose" target="_blank">'Starting the application' section</a> in the repo's Wiki.
 
 ### Step 1.4: Get to know the solution
-In order to get to know the functionality of the application, make sure you have read the introduction of the solution in the repo's README file up to the *Technology* section. After that follow the <a href="https://github.com/EdwinVW/pitstop/wiki/Testing%20the%20application" target="_blank">'Testing the application' section</a> in the repo's Wiki. 
+In order to get to know the functionality of the application, make sure you have read the introduction of the solution in the repo's README file up to the *Technology* section. After that, follow the <a href="https://github.com/EdwinVW/pitstop/wiki/Testing%20the%20application" target="_blank">'Testing the application' section</a> in the repo's Wiki. 
 
 ## Lab 2: ATDD with Specflow and Augurk
 The Pitstop solution does not contain any specifications or scenario-tests. It's up to you to add this to the solution. We will primarily focus on the *WorkshopManagement* domain because this is the domain with the most interesting business-logic.
@@ -158,9 +158,7 @@ Let's open Visual Studio Code to start coding:
 **Add reference to the infrastructure package**
 The CustomerEventHandler service will need to receive messages from the message-broker. I have created a nuget package (*Pitstop.Infrastructure*) that contains a library that will make it easy to implement this without any specific knowledge about RabbitMQ (the broker that is used in the solution). 
 
-You need to add a reference to the *Pitstop.Infrastructure.Messaging* nuget package. The package is hosted in a private MyGet feed on the Internet. The location of the feed is specified in the nuget.config file in the solution, so it will automatically be resolved.
-
-Follow the following steps to add a reference to the package: 
+You need to add a reference to the *Pitstop.Infrastructure.Messaging* nuget package. Execute the following steps to add a reference to the package: 
 
 1. Open the terminal window in Visual Studio Code using the *Terminal* menu.
 2. Type the following command in this window: `dotnet add package PitStop.Infrastructure.Messaging`. 
