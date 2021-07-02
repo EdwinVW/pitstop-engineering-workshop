@@ -33,53 +33,59 @@ By now, you should have some understanding of what the Pitstop solution contains
 ## Lab 0: Preparation
 There are some prerequisites for this workshop. First you need an active Internet connection. Additionally you will need to install the following software on your laptop:
 
-- Docker Community Edition (CE)
+- Docker Desktop
+- Git client
 - Visual Studio Code
-- .NET Core SDK
-- (optional) Git client
+- .NET 5 SDK
 
 >If you already have satisfied these prerequisites, you can skip Lab 0 and go directly to Lab 1. 
 
 ### Step 0.1: Install prerequisites
 Install the following software (if not already installed) on your laptop: 
 
-#### Docker CE
-Download link: <a href="https://docs.docker.com/install" target="_blank">Docker Community Edition (CE)</a>. 
+#### Docker Desktop
+Download link: [Docker Desktop](https://www.docker.com/products/docker-desktop). 
 
-On Windows, you need Hyper-V to be enabled on your machine in order to install Docker for Windows CE. If you have not enabled Hyper-V, do so now. <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v" target="_blank">Here</a> you find a description of how to enable Hyper-V on Windows. Make sure to double-check the prerequisites.
+Install Docker Desktop on your machine. If you are running Windows, you're free to choose whether you want to use WSL2 or not.
 
-For downloading Docker CE, you need to login with your Docker Id. Create one if you don't already have a Docker Id. 
+During the installation, do NOT switch to Windows containers. We will only use Linux containers.
 
-During the installation of Docker CE, do not switch to Windows containers. We will only use Linux containers. After the installation you need to log out and login again (sometimes reboot your machine).
+After the installation and starting Docker, make sure Docker runs correctly by entering this command in a command shell:
 
-After the installation, start the Docker engine by double clicking the Docker for Windows icon. 
+```console
+docker run hello-world
+```
+
+If you get any errors when running this command, check out the Docker documentation to see what the problem is.
+
+#### Git client
+Install the Git client for your OS to interact with the Pitstop repo on Github.
+
+Download link: [Git](https://git-scm.com/downloads)
 
 #### Visual Studio Code
-This workshop assumes you are working with Visual Studio Code. 
+This workshop assumes you are working with Visual Studio Code.
 
-Download link: <a href="https://visualstudio.microsoft.com/downloads" target="_blank">Visual Studio Code</a>
+Download link: [Visual Studio Code](https://visualstudio.microsoft.com/downloads)
+
+Also install the [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) extension for VS Code.
 
 #### .NET 5 SDK
 Install the .NET 5 SDK. 
 
-Download link: <a href="https://www.microsoft.com/net/download" target="_blank">.NET Core SDK</a>
-
-#### Git client
-Install the Git client for your OS to interact with the Pitstop repo on Github. 
-
-Download link: <a href="https://git-scm.com/downloads" target="_blank">Git</a> 
+Download link: [.NET 5 SDK](https://www.microsoft.com/net/download)
 
 ### Step 0.2: Access Github
-If you do not already have a Github account, create one by going to the <a href="https://www.github.com" target="_blank">Github website</a> and click on the *Sign up* link in the top right corner. Make sure you are logged into Github with your account. 
+If you do not already have a Github account, create one by going to the [Github website](https://www.github.com) and click on the *Sign up* link in the top right corner. Make sure you are logged into Github with your account. 
 
 ## Lab 1: Run the applicaton
-In this lab we'll make sure you can run Pitstop on your machine. 
+In this lab we'll make sure you can run Pitstop on your machine.
 
 ### Step 1.1: Get the sources
 Get the sources from Github onto your machine.
 
 For this to work, you must have installed the Git client (see Step 0.1). 
-1. Open your browser and navigate to the Pitstop repo on Github: <a href="https://github.com/edwinvw/pitstop" target="_blank">https://github.com/edwinvw/pitstop</a>. 
+1. Open your browser and navigate to the Pitstop repo on Github: [https://github.com/edwinvw/pitstop](https://github.com/edwinvw/pitstop).
 2. Click the *Fork* button.
 3. The repo is forked to your Github account. If you have multiple accounts, Github will ask which account to fork to.
 4. Click the green *Clone or download* button on the forked repo. A dialog is shown.
@@ -90,16 +96,16 @@ For this to work, you must have installed the Git client (see Step 0.1).
 9. You will be asked to specify a folder for cloning the repo into. Select a folder and confirm. The repo will be cloned in this folder.
 10. When VS Code asks you to open the cloned repo, do that. Now you can start working with the repo.
 
-This would be a good time to walk through the solution and see what's in there. In the <a href="https://github.com/EdwinVW/pitstop/wiki" target="_blank">Wiki</a> of the repo, you can find an overview of the solution structure. 
+This would be a good time to walk through the solution and see what's in there. In the [Wiki](https://github.com/EdwinVW/pitstop/wiki) of the repo, you can find an overview of the solution structure.
 
 ### Step 1.2: Build the Docker images
-In order to build the Docker images, follow the instructions in the <a href="https://github.com/EdwinVW/pitstop/wiki/Building%20the%20Docker%20images" target="_blank">'Building the Docker images' section</a> in the repo's Wiki.
+In order to build the Docker images, follow the instructions in the ['Building the Docker images'](https://github.com/EdwinVW/pitstop/wiki/Building%20the%20Docker%20images) section in the repo's Wiki.
 
 ### Step 1.3: Run the application
-In order to run the application, follow the instructions in the <a href="https://github.com/EdwinVW/pitstop/wiki/Run%20the%20application%20using%20using%20Docker%20Compose" target="_blank">'Starting the application' section</a> in the repo's Wiki.
+In order to run the application, follow the instructions in the ['Starting the application'](https://github.com/EdwinVW/pitstop/wiki/Run%20the%20application%20using%20using%20Docker%20Compose) section in the Wiki.
 
 ### Step 1.4: Get to know the solution
-In order to get to know the functionality of the application, make sure you have read the introduction of the solution in the repo's README file up to the *Technology* section. After that, follow the <a href="https://github.com/EdwinVW/pitstop/wiki/Testing%20the%20application" target="_blank">'Testing the application' section</a> in the repo's Wiki. 
+In order to get to know the functionality of the application, make sure you have read the introduction of the solution in the repo's README file up to the *Technology* section. After that, follow the ['Testing the application'](https://github.com/EdwinVW/pitstop/wiki/Testing%20the%20application) section in the Wiki.
 
 ## Lab 2: ATDD with Specflow and Augurk
 The Pitstop solution does not contain any specifications or scenario-tests. It's up to you to add this to the solution. We will primarily focus on the *WorkshopManagement* domain because this is the domain with the most interesting business-logic.
@@ -114,9 +120,9 @@ When something happens within the Pitstop application that could be interesting 
 
 In this lab you will add a service to the solution that will react to customer events. What we will do when the event is received is up to your imagination. For the workshop, we will keep it simple and just dump a message on the console. 
 
-The service we will build offers no API and can therefore be a simple console application (just as the existing *NotificationService* for instance). 
+The service we will build offers no API and can therefore be a simple console application (just as the existing *NotificationService* for instance).
 
-### Step 3.1: Create the .NET Core application
+### Step 3.1: Create the .NET 5 application
 First we will add a new service to the solution. 
 
 1. Open a command-prompt or Powershell window.
@@ -330,7 +336,7 @@ Until now, you've ran Pitstop in containers on your local machine. In this lab y
 - Make a deployment diagram for deploying Pitstop as-is in Azure. A requirement is that you use Azure PAAS / SAAS services and do not use container-hosting services like ACI or AKS.
 - Send the deployment diagram to your suprevisor for review.
 - Deploy Pitstop to Azure (and make sure the web-app is publicly available).
-- Share a link  to the web-app with your supervisor. 
+- Share a link to the web-app with your supervisor. 
 
 ## Lab 6 - Setup a CI/CD pipeline
 Modern applications are built using an automated CI pipeline and deployed using an automated CD pipeline. Azure DevOps is a tool to implement fully automated CI/CD pipelines. There an on-premises version and a cloud version. In this assignment you will setup a CI/CD pipeline for building and deploying Pitstop.  
