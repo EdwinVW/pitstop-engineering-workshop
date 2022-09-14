@@ -107,22 +107,14 @@ In order to run the application, follow the instructions in the ['Starting the a
 ### Step 1.4: Get to know the solution
 In order to get to know the functionality of the application, make sure you have read the introduction of the solution in the repo's README file up to the *Technology* section. After that, follow the ['Testing the application'](https://github.com/EdwinVW/pitstop/wiki/Testing%20the%20application) section in the Wiki.
 
-## Lab 2: ATDD with Specflow and Augurk
-The Pitstop solution does not contain any specifications or scenario-tests. It's up to you to add this to the solution. We will primarily focus on the *WorkshopManagement* domain because this is the domain with the most interesting business-logic.
-
-1. Add [specflow](https://specflow.org/) to the *WorkshopManagementAPI*.
-2. Write specflow feature files for the functionality in this domain.
-3. Write scenario-tests based on the feature-files that test the domain's functionality.
-4. Setup [Augurk](https://github.com/Augurk/Augurk) for the project so that you are able to see living documentation for the *WorkshopManagement* domain based on the feature files.
-
-## Lab 3: Add an event-handler for customer events
+## Lab 2: Add an event-handler for customer events
 When something happens within the Pitstop application that could be interesting for other parts of the system, an event is published to the message-broker. For instance: when a new customer is registered, a *CustomerRegistered* event is published. 
 
 In this lab you will add a service to the solution that will react to customer events. What we will do when the event is received is up to your imagination. For the workshop, we will keep it simple and just dump a message on the console. 
 
 The service we will build offers no API and can therefore be a simple console application (just as the existing *NotificationService* for instance).
 
-### Step 3.1: Create the .NET 6 application
+### Step 2.1: Create the .NET 6 application
 First we will add a new service to the solution. 
 
 1. Open a command-prompt or Powershell window.
@@ -148,14 +140,14 @@ The output should look like this:
 
 ![](img/dotnet-run-customereventhandler.png)
 
-### Step 3.2: Create event-handler
+### Step 2.2: Create event-handler
 Now that you've added a new .NET Core project to the solution, you can start implementing the business logic of the service. As stated, the 'business logic' will be fairly simple for this workshop.
 
 **Open the project in VS Code**
 Let's open Visual Studio Code to start coding:
 
 1. Start Visual Studio Code.
-2. Select *File*, *Open Folder* and select the *CustomerEventHandler* folder you created in step 3.1. 
+2. Select *File*, *Open Folder* and select the *CustomerEventHandler* folder you created in step 2.1. 
    
    >Visual Studio Code might show you some dialogs about plugins that you can install. For now, just install all plugins that it suggests. It will also asks you to add some 'assets' it needs for building and debugging the project. Acknowledge this with 'Yes'. This will create a '.vscode' folder. You can ignore that folder for now.
    
@@ -220,7 +212,7 @@ In order to check whether or not you made any mistakes until now, build the code
 
 ![](img/vscode-build.png) 
 
-### Step 3.3: Run the service
+### Step 2.3: Run the service
 We can start the *CustomerEventHandler* to test whether or not it works. 
 
 1. Make sure you have the Pitstop application running on your machine (as described in Step 1.3: Run the application).
@@ -235,7 +227,7 @@ Watch the output window of your *CustomerEventHandler*. You should see that a me
 
 That's it! You have now created a new service that can react on events emitted by the services in the Pitstop solution. Pretty sweet!
 
-### Step 3.4: Create Docker image
+### Step 2.4: Create Docker image
 Now that you have created a functional service, let's run it in a Docker container.
 
 1. Add a new file to the project named *Dockerfile*.
@@ -262,7 +254,7 @@ Now you are going to build a Docker image using the Dockerfile.
 
    ![](img/docker-images.png)
 
-### Step 3.5: Run the service in a Docker container
+### Step 2.5: Run the service in a Docker container
 Now that you have the Docker image, you can start a container based on this image. 
 
 1. Run a Docker container based on the image by entering the following command:
@@ -279,7 +271,7 @@ Watch the output of your running container. You should see that message again th
 
 **Before you continue, stop the running container by pressing `Ctrl-C`.**
 
-### Step 3.6: Run the service using docker-compose
+### Step 2.6: Run the service using docker-compose
 The last step in this lab is to extend the docker-compose file to include your service. 
 
 1. Open the *docker-compose* file in the *src* folder of the Pitstop repo in Visual Studio Code.
