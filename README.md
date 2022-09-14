@@ -1,7 +1,7 @@
 # Pitstop engineering workshop
 This document describes an engineering workshop that can be used for training .NET engineers and getting them up to speed on several cloud-native software-architecture aspects and how to develop and run software using containerization technologies like Docker and Kubernetes.
 
-In most workshops you start from scratch, but in this workshop you will actually start with a complete working solution called Pitstop. You will learn by executing several labs in which you will be adding functionality to the solution.
+In most workshops you start from scratch, but in this workshop you will actually start with a complete working solution called Pitstop. You will learn by executing several labs in which you will be adding functionality to the solution. Any changes you make will only exist in your personal fork and must never be merged back into the actual Pitstop repository. The workshop is purely meant for learning new skills.
 
 Pitstop is an open-source .NET Core sample application that demonstrates the following software-architecture aspects:
 
@@ -97,6 +97,8 @@ For this to work, you must have installed the Git client (see Step 0.1).
 10. When VS Code asks you to open the cloned repo, do that. Now you can start working with the repo.
 
 This would be a good time to walk through the solution and see what's in there. In the [Wiki](https://github.com/EdwinVW/pitstop/wiki) of the repo, you can find an overview of the solution structure.
+
+> CAUTION: When you push your changes to your fork of the repository, do not create any pull requests for merging your changes back to the original Pitstop repository. Any changes you make will only exist in your personal fork and must never be merged back into the actual Pitstop repository. The workshop is purely meant for learning new skills.
 
 ### Step 1.2: Build the Docker images
 In order to build the Docker images, follow the instructions in the ['Building the Docker images'](https://github.com/EdwinVW/pitstop/wiki/Building%20the%20Docker%20images) section in the repo's Wiki.
@@ -320,14 +322,14 @@ In the context-map shown in the <a href="https://github.com/EdwinVW/pitstop/wiki
 5. Extend the UI-tests with this new functionality.
 
 ## Lab 5 - Deploy Pitstop to Azure
-Until now, you've ran Pitstop in containers on your local machine. In this lab you will learn how to deploy a microservices application that consists of multiple parts (Pitstop) in Microsoft Azure. In a production scenario, using containers for running the app would be a fine solution. But in order to get you up-to-speed with different Azure services, you're not allowed to host the app in containers (using ACI or AKS).
+Until now, you've ran Pitstop in containers on your local machine. In this lab you will learn how to deploy a microservices application that consists of multiple parts (Pitstop) in Microsoft Azure. In a production scenario, using containers for running the app would be a fine solution. But in order to get you up-to-speed with different Azure services, you're not allowed to host the app in containers.
 
 - Follow the following courses in the Pluralsight library:
 	- [AZ-103 - Azure Administrator](https://app.pluralsight.com/paths/certificate/microsoft-azure-administrator-az-103)
 	- [AZ-203 - Developing Solutions for Microsoft Azure](https://app.pluralsight.com/paths/certificate/developing-solutions-for-microsoft-azure-az-203)
 - Request access to an Azure Subscription by asking approval from your business-unit manager and sending an email to [support@infosupport.com](mailto:support@infosupport.com).
-- Make a deployment diagram for deploying Pitstop as-is in Azure. A requirement is that you use Azure PAAS / SAAS services and do not use container-hosting services like ACI or AKS.
-- Send the deployment diagram to your suprevisor for review.
+- Make a deployment diagram for deploying Pitstop as-is in Azure. A requirement is that you use Azure PAAS / SAAS services and do not use container-hosting services like ACI, ACA or AKS.
+- Send the deployment diagram to your supervisor for review.
 - Deploy Pitstop to Azure (and make sure the web-app is publicly available).
 - Share a link to the web-app with your supervisor. 
 
