@@ -220,7 +220,7 @@ We can start the *CustomerEventHandler* to test whether or not it works.
 1. Make sure you have the Pitstop application running on your machine (as described in Step 1.3: Run the application).
 2. Open a command prompt or Powershell window and go to the *CustomerEventHandler* folder.
 3. Start the application by giving the following command: `dotnet run`.
-4. Open the browser and go to http://localhost:7000 to open the Pitstop web-app.
+4. Open the browser and go to http://localhost:7005 to open the Pitstop web-app.
 5. Go to the *Customer Management* tab and register a new customer.
 
 Watch the output window of your *CustomerEventHandler*. You should see that a message is printed to the console, something like this:
@@ -264,7 +264,7 @@ Now that you have the Docker image, you can start a container based on this imag
 	`docker run -it --rm --network src_default --name customereventhandler pitstop/customereventhandler:1.0`
 
    >In this command you specify the virtual network to connect with. In this case we specify the name of the default network that was created by docker-compose when we started the solution (*src_default*). By doing this, the container can find and access the RabbitMQ server that is running in a separate Docker container on the virtual network.
-2. Open the browser and go to http://localhost:7000 to open the Pitstop web-app.
+2. Open the browser and go to http://localhost:7005 to open the Pitstop web-app.
 3. Go to the *Customer Management* tab and register a new customer.
 
 Watch the output of your running container. You should see that message again that indicates that a customer was registered:
@@ -293,7 +293,7 @@ The last step in this lab is to extend the docker-compose file to include your s
 4. Open the Powershell window where you started the solution using `docker-compose up`.
 5. Stop the running solution by pressing `Ctrl-C` and wait until all the containers are stopped.
 6. Restart the solution by giving the command: `docker-compose up`. The *CustomerEventHandler* will be started together with all the other services.
-2. Open the browser and go to http://localhost:7000 to open the Pitstop web-app.
+2. Open the browser and go to http://localhost:7005 to open the Pitstop web-app.
 3. Go to the *Customer Management* tab and register a new customer.
 
 Watch the docker-compose logging in the console. You should see that message again that indicates that a customer was registered:
